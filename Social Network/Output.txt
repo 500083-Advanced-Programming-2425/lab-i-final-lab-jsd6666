@@ -1,0 +1,21 @@
+ViewProfile 73D0EF96
+Error: Unrecognised command.
+
+ListFriends 73D0EF96
+Error: Unrecognised command.
+
+ListMutuals 73D0EF96 8A4ECF3A
+Error: Unrecognised command.
+
+FindSeparation 73D0EF96 A205E5BA
+Error: Unrecognised command.
+
+FriendScore 73D0EF96 A205E5BA
+Error: Unrecognised command.
+
+SuggestFriends 73D0EF96
+Error: Unrecognised command.
+
+TotalUsers GBR FRA
+Error: Unrecognised command.
+
