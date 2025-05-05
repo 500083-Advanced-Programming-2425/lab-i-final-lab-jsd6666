@@ -35,21 +35,68 @@ Solution::Solution() : _outFile("Output.txt")
 }
 
 // processCommand implementation 
-bool Solution::processCommand(const std::string& commandString)
-{
-    // echo command to output file first
-    _outFile << commandString << std::endl;
+bool Solution::processCommand(const std::string& commandString) {
+    _outFile << commandString << std::endl; 
 
-    std::istringstream inString(commandString);
-    std::string command;
-    inString >> command; // read first word as command
+    std::stringstream ss(commandString);
+    std::string commandWord;
+    ss >> commandWord; // read the cmd name
 
-    // TODO: add actual command handling logic here
+    bool commandSuccess = false; // bool to track if cmd was recognised and processed
 
-    // handle unknown cmd / error
-    _outFile << "Error: Unrecognised command." << std::endl;
-    _outFile << std::endl;
-    return false; // false for failure
+    if (commandWord == "ViewProfile") {
+        std::string userID;
+        ss >> userID; // read next part of cmd string as userID
+
+        // logic for ViewProfile
+        auto const it = users.find(userID); // search for user in the map
+
+        if (it != users.end()) { // check if user was found
+            const User& user = it->second; // get reference to found user object
+
+            // lookup country name
+            std::string countryName = "Unknown"; // default
+            auto const country_it = countryLookup.find(user.countryCode);
+            if (country_it != countryLookup.end()) {
+                countryName = country_it->second;
+            }
+
+            // calculate activity percentage
+            int activityPercentage = static_cast<int>(std::round(user.activityRate * 100.0));
+
+            // get friend count
+            size_t friendCount = user.friends.size();
+
+            // output
+            _outFile << "Name: " << user.fullName << std::endl;
+            _outFile << "Age: " << user.age << std::endl;
+            _outFile << "Country: " << countryName << std::endl;
+            _outFile << "Activity Rate: " << activityPercentage << "%" << std::endl;
+            _outFile << "Friends: " << friendCount << std::endl;
+
+            commandSuccess = true; // flag cmd as processed
+
+        }
+        else {
+            // user not found = output error
+            _outFile << "Error: User not found." << std::endl;
+            commandSuccess = false; // flag cmd as failed
+        }
+
+    }
+    // *** Add else if blocks here for other commands (ListFriends, ListMutuals, etc.) ***
+    // else if (commandWord == "ListFriends") {
+    //     // ... implementation ...
+    //     commandSuccess = true; // or false if error
+    // }
+    else {
+        // cmd word not recognised
+        _outFile << "Error: Unrecognised command." << std::endl;
+        commandSuccess = false; // flag cmd as failed (unrecognised)
+    }
+
+    _outFile << std::endl; // output required blank line after cmd output/error
+    return commandSuccess; // true if recognised and processed successfully / false otherwise
 }
 
 // buildNetwork implementation

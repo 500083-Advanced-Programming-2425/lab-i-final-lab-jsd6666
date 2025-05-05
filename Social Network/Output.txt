@@ -1,5 +1,9 @@
 ViewProfile 73D0EF96
-Error: Unrecognised command.
+Name: Kurtis Wood
+Age: 68
+Country: Norway
+Activity Rate: 36%
+Friends: 16
 
 ListFriends 73D0EF96
 Error: Unrecognised command.
