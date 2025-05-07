@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <fstream>
 #include <string>
@@ -50,12 +50,8 @@ public:
     // constructor initializes object
     Solution();
 
-    // reads user and friendship data then builds network representation.
-    // return true on success & false on fail (e.g. file not found).
     bool buildNetwork(const std::string& fileNameUsers, const std::string& fileNameFriendships);
 
-    // processes a single command read from commands.txt file.
-    // returns true if command processed successfully, otherwise false (e.g. invalid command cuz user not found).
     bool processCommand(const std::string& commandString);
 
 

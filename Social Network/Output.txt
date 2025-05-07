@@ -6,20 +6,44 @@ Activity Rate: 36%
 Friends: 16
 
 ListFriends 73D0EF96
-Error: Unrecognised command.
+16 friend(s) found.
+Gemma Powell [ID:E29FDB1B]
+Penelope Barnes [ID:7F3870E4]
+Ella Nguyen [ID:36AFADD0]
+Gladys Barnes [ID:1EDEF19B]
+Ellie Young [ID:2F5D9663]
+Helena Reed [ID:9CDBB99F]
+Maria Hughes [ID:B5B36E2D]
+Lauren Collins [ID:47837438]
+Isla Foster [ID:49B6206F]
+Marcus Gonzalez [ID:F0D81FF4]
+Paula Walker [ID:D7572910]
+Andrew Washington [ID:B3E14885]
+Brian Watson [ID:43B06C7F]
+Damien Long [ID:B651431F]
+Bridget Miller [ID:DFA5F822]
+Gloria Hernandez [ID:E6EEE3D2]
 
 ListMutuals 73D0EF96 8A4ECF3A
-Error: Unrecognised command.
+3 mutual friend(s) found.
+Brian Watson [ID:43B06C7F]
+Andrew Washington [ID:B3E14885]
+Bridget Miller [ID:DFA5F822]
 
 FindSeparation 73D0EF96 A205E5BA
-Error: Unrecognised command.
+3 degree(s)
 
 FriendScore 73D0EF96 A205E5BA
-Error: Unrecognised command.
+15.43
 
 SuggestFriends 73D0EF96
-Error: Unrecognised command.
+Top 5 Suggestions:
+Darren Jackson [ID:F497F7DE] - 2 mutual friend(s)
+Regina Evans [ID:B7B1BD5C] - 1 mutual friend(s)
+David Jones [ID:E1C2B490] - 1 mutual friend(s)
+Edward Flores [ID:2F14162C] - 0 mutual friend(s)
+Evan Jones [ID:31A8A449] - 0 mutual friend(s)
 
 TotalUsers GBR FRA
-Error: Unrecognised command.
+246
 
